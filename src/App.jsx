@@ -69,7 +69,7 @@ export const App = () => {
       <div className="buttons">
         <button
           type="button"
-          className="button is-info is-light"
+          className={`button ${sortFiled === SORT_FIELD_ALPHABET ? 'is-info' : 'is-light'}`}
           onClick={() => setSortFiled(SORT_FIELD_ALPHABET)}
         >
           Sort alphabetically
@@ -77,7 +77,7 @@ export const App = () => {
 
         <button
           type="button"
-          className="button is-success is-light"
+          className={`button ${sortFiled === SORT_FIELD_LENGTH ? 'is-success' : 'is-light'}`}
           onClick={() => setSortFiled(SORT_FIELD_LENGTH)}
         >
           Sort by length
@@ -85,7 +85,7 @@ export const App = () => {
 
         <button
           type="button"
-          className="button is-warning is-light"
+          className={`button ${isReversed ? 'is-warning' : 'is-light'}`}
           onClick={() => setIsReversed(prev => !prev)}
         >
           Reverse
